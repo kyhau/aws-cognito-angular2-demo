@@ -29,18 +29,14 @@ export class AwsUtil {
             return;
         }
 
-
         console.log("AwsUtil: Running initAwsService()");
         AwsUtil.runningInit = true;
-
 
         let mythis = this;
         // First check if the user is authenticated already
         if (isLoggedIn)
             mythis.setupAWS(isLoggedIn, callback, idToken);
-
     }
-
 
     /**
      * Sets up the AWS global params
@@ -64,7 +60,6 @@ export class AwsUtil {
             this.addCognitoCredentials(idToken);
 
             console.log("AwsUtil: Retrieving the id token");
-
         }
         else {
             console.log("AwsUtil: User is not logged in");
@@ -87,10 +82,17 @@ export class AwsUtil {
             if (!err) {
                 // var id = AWS.config.credentials.identityId;
                 if (AwsUtil.firstLogin) {
+                    console.log("AwsUtil: addCognitoCredentials firstLogin, writing to database");
                     // save the login info to DDB
                     this.ddb.writeLogEntry("login");
                     AwsUtil.firstLogin = false;
                 }
+                else {
+                    console.log("AwsUtil: addCognitoCredentials firstLogin == False");
+                }
+            }
+            else {
+                console.log("AwsUtil: addCognitoCredentials: err: " + err);
             }
         });
     }
