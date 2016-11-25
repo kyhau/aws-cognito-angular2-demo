@@ -42,7 +42,7 @@ ng build; cd dist; aws s3 sync . s3://TestCognito/ --acl public_read
 ```
 ```
 # Test it out
-curl –I http://budilov-cognito.s3-website-us-east-1.amazonaws.com/
+curl –I http://TestCognito.s3-website-ap-southeast-2.amazonaws.com/
 ```
 
 ## Necessary changes
