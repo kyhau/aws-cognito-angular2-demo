@@ -22,15 +22,16 @@ export interface Callback {
 @Injectable()
 export class CognitoUtil {
 
-    public static _REGION = "us-east-1";
+    // Region: Tokyo
+    public static _REGION = "ap-northeast-1";
 
-    public static _IDENTITY_POOL_ID = "us-east-1:fbe0340f-9ffc-4449-a935-bb6a6661fd53";
-    public static _USER_POOL_ID = "us-east-1_PGSbCVZ7S";
-    public static _CLIENT_ID = "hh5ibv67so0qukt55c5ulaltk";
+    public static _IDENTITY_POOL_ID = "ap-northeast-1:m987b94f-4f1c-4e36-8e08-0e3115b73e24";
+    public static _USER_POOL_ID = "ap-northeast-1_u7kcoNTr8";
+    public static _APP_CLIENT_ID = "l9ari31b5dlc78o3sj0e0he35f";
 
     public static _POOL_DATA = {
         UserPoolId: CognitoUtil._USER_POOL_ID,
-        ClientId: CognitoUtil._CLIENT_ID
+        ClientId: CognitoUtil._APP_CLIENT_ID
     };
 
 
@@ -210,7 +211,7 @@ export class UserLoginService {
     }
 
     authenticate(username:string, password:string, callback:CognitoCallback) {
-        console.log("UserLoginService: stgarting the authentication")
+        console.log("UserLoginService: starting the authentication")
         // Need to provide placeholder keys unless unauthorised user access is enabled for user pool
         AWSCognito.config.update({accessKeyId: 'anything', secretAccessKey: 'anything'})
 
@@ -231,12 +232,16 @@ export class UserLoginService {
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: function (result) {
 
+                let loginProvider = {};
+                let url = 'cognito-idp.' + CognitoUtil._REGION.toLowerCase() + '.amazonaws.com/' + CognitoUtil._USER_POOL_ID;
+                loginProvider[url] = result.getIdToken().getJwtToken();
+
+                console.log("UserLoginService: loginProvider is " + JSON.stringify(loginProvider));
+
                 // Add the User's Id Token to the Cognito credentials login map.
                 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
                     IdentityPoolId: CognitoUtil._IDENTITY_POOL_ID,
-                    Logins: {
-                        'cognito-idp.us-east-1.amazonaws.com/us-east-1_PGSbCVZ7S': result.getIdToken().getJwtToken()
-                    }
+                    Logins: loginProvider
                 });
 
                 console.log("UserLoginService: set the AWS credentials - " + JSON.stringify(AWS.config.credentials));

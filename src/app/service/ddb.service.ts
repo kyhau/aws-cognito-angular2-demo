@@ -7,6 +7,8 @@ declare var AWSCognito:any;
 @Injectable()
 export class DynamoDBService {
 
+    public static _TABLE_NAME = "TestCognitoLoginTrail"
+
     constructor() {
         console.log("DynamoDBService: constructor");
     }
@@ -14,7 +16,7 @@ export class DynamoDBService {
     getLogEntries(mapArray:Array<Stuff>) {
         console.log("DynamoDBService: reading from DDB with creds - " + AWS.config.credentials);
         var params = {
-            TableName: 'LoginTrail',
+            TableName: DynamoDBService._TABLE_NAME,
             KeyConditionExpression: "userId = :userId",
             ExpressionAttributeValues: {
                 ":userId": AWS.config.credentials.params.IdentityId
@@ -51,7 +53,7 @@ export class DynamoDBService {
     write(data:string, date:string, type:string):void {
         console.log("DynamoDBService: writing " + type + " entry");
         var DDB = new AWS.DynamoDB({
-            params: {TableName: 'LoginTrail'}
+            params: {TableName: DynamoDBService._TABLE_NAME}
         });
 
         // Write the item to the table
@@ -69,5 +71,4 @@ export class DynamoDBService {
     }
 
 }
-
 
