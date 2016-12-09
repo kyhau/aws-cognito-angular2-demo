@@ -1,31 +1,29 @@
 # Cognito Quickstart
 
-## What does this app do?
-![QuickStart Angular2 Cognito App](/aws/cognito-quickstart-app-overview.png?raw=true)
+## Actual AWS Setup
 
-## Tech Stack
-**Required Tools**
+`createResources.sh` uses `awscli` commands to create the following resources.
 
-* [aws cli](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
-* [npm](https://www.npmjs.com/)
-* [angular-cli](https://github.com/angular/angular-cli)
+1. Cognito Identity Pool with auth/unauth roles and policies
+2. Cognito User Pool
+3. DynamoDB for storing login activities
+4. S3 (optional, for hosting static website)
 
-**Frameworks**
+### Run
 
-* [AWS JavaScript SDK](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html)
-* [Angular 2](https://angular.io/docs/ts/latest/quickstart.html) [(Ionic)](http://ionicframework.com/docs/v2/getting-started/installation/)
-* [TypeScript](https://www.typescriptlang.org/docs/tutorial.html)
-* [Bootstrap](http://getbootstrap.com/)
+1. Set up aws config and credentials 
+2. Install [awscli](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+3. Change the following configurations in ```createResources.sh```.
 
-## AWS Setup
-To create some of the AWS resources that are required for this app to run, 
-run the ```aws/createResources.sh``` file included under the aws directory. 
+    ```
+    REGION=ap-southeast-2
+    COGNITO_REGION=ap-northeast-1
+    ROOT_NAME=TestCognito
+    BUCKET_NAME=bn-testing-cognito
+    ```
+4. Run ```createResources.sh```
 
-You will need to create the user pool manually through the console. Afterwards, you'll need to update the identity
-pool with the relevant user pool information under Authentication Providers. Also, you'll need to assign the correct
-roles to the identity pool. 
-
-## Build and Run
+## Build and Run sample frontend for demo
 
 ```
 # Install the NPM & Bower packages, and typings
@@ -49,3 +47,6 @@ curl –I http://TestCognito.s3-website-ap-southeast-2.amazonaws.com/
 As is, the code has default configuration, pointing to the developer's region. You 
 will need to change the pool id, region, and dynamodb table id. You can find these
 configurations in ```aws.service.ts``` and ```cognito.service.ts```
+
+## What does this app do?
+![QuickStart Angular2 Cognito App](/aws/cognito-quickstart-app-overview.png?raw=true)
