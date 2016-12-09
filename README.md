@@ -38,7 +38,7 @@ npm start
 ```
 ```
 # Build the project and sync the output with the S3 bucket
-ng build; cd dist; aws s3 sync . s3://TestCognito/ --acl public_read
+ng build; cd dist; aws s3 sync . s3://TestCognito/ --acl public-read
 ```
 ```
 # Test it out
