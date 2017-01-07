@@ -1,5 +1,9 @@
 # Cognito Quickstart
 
+## Build
+6.x.x [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-demo.svg?branch=master)](https://travis-ci.org/kyhau/aws-cognito-angular2-demo)
+
+
 ## Actual AWS Setup
 
 `createResources.sh` uses `awscli` commands to create the following resources.
