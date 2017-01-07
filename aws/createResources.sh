@@ -10,7 +10,7 @@ COGNITO_REGION=ap-northeast-1
 # DynamoDB region = tokyo
 DYNAMODB_REGION=ap-northeast-1
 ROOT_NAME=CognitoTestAlpha
-BUCKET_NAME=${ROOT_NAME}
+BUCKET_NAME=cognito-test-alpha
 
 TABLE_NAME=${ROOT_NAME}LoginTrail
 ROLE_NAME_PREFIX=$ROOT_NAME
