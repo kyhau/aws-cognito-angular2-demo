@@ -14,6 +14,7 @@
 1. Install [awscli](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 2. Set up aws config and credentials 
 3. Change the following configurations in `createResources.sh`.
+
     ~~~~
     REGION=ap-southeast-2
     COGNITO_REGION=ap-northeast-1
