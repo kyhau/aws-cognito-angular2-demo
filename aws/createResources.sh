@@ -9,7 +9,7 @@ REGION=ap-southeast-2
 COGNITO_REGION=ap-northeast-1
 # DynamoDB region = tokyo
 DYNAMODB_REGION=ap-northeast-1
-ROOT_NAME=TestCognito
+ROOT_NAME=CognitoTestAlpha
 BUCKET_NAME=${ROOT_NAME}
 
 TABLE_NAME=${ROOT_NAME}LoginTrail
@@ -18,8 +18,8 @@ POOL_NAME=$ROOT_NAME
 IDENTITY_POOL_NAME=$ROOT_NAME
 
 echo "######################################################################"
-echo "Creating bucket $BUCKET_NAME ..."
-aws s3api create-bucket --bucket $BUCKET_NAME --region $REGION
+echo "Creating bucket z ..."
+aws s3api create-bucket --bucket $BUCKET_NAME --create-bucket-configuration LocationConstraint=$REGION
 
 echo "Adding the S3 static website configuration and bucket policy ..."
 aws s3api put-bucket-website --bucket $BUCKET_NAME --website-configuration file://website.json

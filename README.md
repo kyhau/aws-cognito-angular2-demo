@@ -13,15 +13,14 @@
 
 1. Set up aws config and credentials 
 2. Install [awscli](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
-3. Change the following configurations in ```createResources.sh```.
-
-    ```
+3. Change the following configurations in `createResources.sh`.
+    ~~~~
     REGION=ap-southeast-2
     COGNITO_REGION=ap-northeast-1
-    ROOT_NAME=TestCognito
-    BUCKET_NAME=bn-testing-cognito
-    ```
-4. Run ```createResources.sh```
+    ROOT_NAME=CognitoTestAlpha
+    BUCKET_NAME=cognito-test-alpha
+    ~~~~
+4. Run `createResources.sh`
 
 ## Build and Run sample frontend for demo
 
@@ -36,11 +35,11 @@ npm start
 ```
 ```
 # Build the project and sync the output with the S3 bucket
-ng build; cd dist; aws s3 sync . s3://TestCognito/ --acl public-read
+ng build; cd dist; aws s3 sync . s3://cognito-test-alpha/ --acl public-read
 ```
 ```
 # Test it out
-curl –I http://TestCognito.s3-website-ap-southeast-2.amazonaws.com/
+curl –I http://cognito-test-alpha.s3-website-ap-southeast-2.amazonaws.com/
 ```
 
 ## Necessary changes
