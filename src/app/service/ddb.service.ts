@@ -7,7 +7,7 @@ declare var AWSCognito:any;
 @Injectable()
 export class DynamoDBService {
 
-    public static _TABLE_NAME = "TestCognitoLoginTrail"
+    public static _TABLE_NAME = "CognitoTestAlphaLoginTrail"
 
     constructor() {
         console.log("DynamoDBService: constructor");
