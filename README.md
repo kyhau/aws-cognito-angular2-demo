@@ -1,7 +1,7 @@
 # Cognito Quickstart
 
 ## Build
-node v6.x.x: [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-demo.svg?branch=master)](https://travis-ci.org/kyhau/aws-cognito-angular2-demo)
+node v6.9.4: [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-quickstart.svg?branch=master)](https://travis-ci.org/kyhau/aws-cognito-angular2-quickstart)
 
 
 ## Actual AWS Setup
