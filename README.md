@@ -7,7 +7,7 @@ node v6.9.4: [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-w
 
 ## Demo
 
-[Cognito Web UI in Angular2](http://http://k-cognito-alpha.s3-website-ap-southeast-2.amazonaws.com)
+[Cognito Web UI in Angular2](http://k-cognito-alpha.s3-website-ap-southeast-2.amazonaws.com)
 
 ## Actual AWS Setup
 
