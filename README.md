@@ -47,6 +47,3 @@ You  will need to change the following configurations in `cognito.service.ts` an
 3. DynamoDB Table ID. 
 
 As is, the code has default configuration, pointing to the developer's region.
-
-## What does this app do?
-![QuickStart Angular2 Cognito App](/aws/cognito-quickstart-app-overview.png?raw=true)
