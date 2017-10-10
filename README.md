@@ -1,4 +1,4 @@
-# Cognito Web UI in Angular2/Typescript
+# Cognito Web UI in Angular2
 
 The code is modified from https://github.com/awslabs/aws-cognito-angular2-quickstart.
 
@@ -17,7 +17,7 @@ to create
 1. Cognito Identity Pool with auth/unauth roles and policies
 2. Cognito User Pool
 3. DynamoDB for storing login activities
-4. S3 (optional, for hosting static website)
+4. S3 for hosting static website
 
 ## Build and run
 ```
