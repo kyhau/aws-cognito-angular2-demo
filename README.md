@@ -31,11 +31,11 @@ npm start
 ```
 ```
 # Build the project and sync the output with the S3 bucket
-ng build; cd dist; aws s3 sync . s3://bn-cognito-sydney/ --acl public-read
+ng build; cd dist; aws s3 sync . s3://(your-bucket-name)/ --acl public-read
 ```
 ```
 # Test it out
-curl –I http://bn-cognito-sydney.s3-website-ap-southeast-2.amazonaws.com/
+curl –I http://(your-bucket-name).s3-website-(your-region).amazonaws.com/
 ```
 
 ## Necessary changes
