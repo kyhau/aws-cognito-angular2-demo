@@ -1,15 +1,14 @@
 # Cognito Web UI in Angular2
 
+node v6.9.4: [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-webui.svg?branch=master)](https://travis-ci.org/kyhau/aws-cognito-angular2-webui)
+
 The code is modified from https://github.com/awslabs/aws-cognito-angular2-quickstart.
 
 The app provides interface show how to use Cognito User Pool and Cognito Identity Pool to support user sign-up, sign-in and authentication for your app. The app also shows log to log the user login activiies to a DynamoDB table. 
 
-## Build
-node v6.9.4: [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-webui.svg?branch=master)](https://travis-ci.org/kyhau/aws-cognito-angular2-webui)
-
 ## Demo
 
-[Cognito Web UI in Angular2](http://k-cognito-alpha.s3-website-ap-southeast-2.amazonaws.com)
+See [Cognito Web UI in Angular2](http://k-cognito-alpha.s3-website-ap-southeast-2.amazonaws.com)
 
 ## Actual AWS Setup
 
