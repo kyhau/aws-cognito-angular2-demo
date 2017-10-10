@@ -9,9 +9,11 @@ import {
 import {DynamoDBService} from "../../service/ddb.service";
 
 export class RegistrationUser {
-    name:string;
     email:string;
     password:string;
+    family_name:string;
+    given_name:string;
+    zoneinfo:string;
 }
 
 @Component({

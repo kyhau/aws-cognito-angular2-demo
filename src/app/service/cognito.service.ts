@@ -149,12 +149,22 @@ export class UserRegistrationService {
             Name: 'email',
             Value: user.email
         };
-        let dataNickname = {
-            Name: 'nickname',
-            Value: user.name
+        let dataGivenName = {
+            Name: 'given_name',
+            Value: user.given_name
+        };
+        let dataFamilyName = {
+            Name: 'family_name',
+            Value: user.family_name
+        };
+        let dataZoneinfo = {
+            Name: 'zoneinfo',
+            Value: user.zoneinfo
         };
         attributeList.push(new AWSCognito.CognitoIdentityServiceProvider.CognitoUserAttribute(dataEmail));
-        attributeList.push(new AWSCognito.CognitoIdentityServiceProvider.CognitoUserAttribute(dataNickname));
+        attributeList.push(new AWSCognito.CognitoIdentityServiceProvider.CognitoUserAttribute(dataGivenName));
+        attributeList.push(new AWSCognito.CognitoIdentityServiceProvider.CognitoUserAttribute(dataFamilyName));
+        attributeList.push(new AWSCognito.CognitoIdentityServiceProvider.CognitoUserAttribute(dataZoneinfo));
 
         this.cognitoUtil.getUserPool().signUp(user.email, user.password, attributeList, null, function (err, result) {
             if (err) {
