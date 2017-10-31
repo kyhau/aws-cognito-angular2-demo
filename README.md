@@ -12,7 +12,7 @@ See [Cognito Web UI in Angular2](http://k-cognito-alpha.s3-website-ap-southeast-
 
 ## Actual AWS Setup
 
-Use Cognito.template in [https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito]https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito)
+Use `Cognito-UserPool-IdentityPool-DynamoDB.template` in [https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito](https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito)
 to create
 
 1. Cognito Identity Pool with auth/unauth roles and policies
