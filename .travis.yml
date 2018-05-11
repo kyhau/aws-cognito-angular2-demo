@@ -5,7 +5,7 @@ install:
   - npm uninstall -g angular/cli
   - npm uninstall --save-dev angular-cli
   - rm -rf node_modules dist
-  - npm cache clean
+  - npm cache clean --force
   - npm install -g @angular/cli@latest
   - npm install --save-dev @angular/cli@latest
   - npm install
