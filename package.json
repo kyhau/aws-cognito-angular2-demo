@@ -29,7 +29,7 @@
     "zone.js": "^0.8.20"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.13.0",
+    "@angular-devkit/build-angular": "~0.800.0",
     "@angular/cli": "^8.0.0",
     "@types/jasmine": "2.2.30",
     "@types/selenium-webdriver": "2.44.26",
@@ -44,7 +44,7 @@
     "protractor": "^5.4.2",
     "ts-node": "1.2.1",
     "tslint": "5.7.0",
-    "typescript": "2.4.2",
+    "typescript": "3.4.5",
     "webpack": "4.29.0",
     "webpack-dev-middleware": "1.10.1",
     "webpack-dev-server": "^3.1.14",
