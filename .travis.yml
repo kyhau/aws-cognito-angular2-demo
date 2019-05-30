@@ -11,9 +11,11 @@ install:
   - npm cache clean --force
   - npm install -g @angular/cli@latest
   - npm install --save-dev @angular/cli@latest
+  - npm install --save @angular/compiler-cli
   - npm install
 script:
-  - ng update @angular/cli --migrate-only --from=1.7.4
+  #- ng update @angular/cli --migrate-only --from=1.7.4
+  - ng update @angular/cli
   - ng build
   - cd dist
   - ls -al
