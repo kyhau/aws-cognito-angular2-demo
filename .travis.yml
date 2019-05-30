@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 10.15
+  - 10.16
 before_install:
   # Set NG_CLI_ANALYTICS to disable Angular CLI prompt "Would you like to share anonymous usage data with the Angular Team" 
   - export NG_CLI_ANALYTICS=ci

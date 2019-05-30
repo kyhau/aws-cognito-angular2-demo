@@ -1,18 +1,22 @@
 # Cognito Web UI in Angular2
 
-node v10.15: [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-webui.svg?branch=master)](https://travis-ci.org/kyhau/aws-cognito-angular2-webui)
+node v10.16: [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-webui.svg?branch=master)](
+https://travis-ci.org/kyhau/aws-cognito-angular2-webui)
 
 The code is modified from https://github.com/awslabs/aws-cognito-angular2-quickstart.
 
-The app provides interface show how to use Cognito User Pool and Cognito Identity Pool to support user sign-up, sign-in and authentication for your app. The app also shows log to log the user login activiies to a DynamoDB table. 
+The app provides interface show how to use Cognito User Pool and Cognito Identity Pool to support user sign-up, sign-in
+and authentication for your app. The app also shows log to log the user login activiies to a DynamoDB table. 
 
 ## Demo
 
-See [Cognito Web UI in Angular2](http://k-cognito-alpha.s3-website-ap-southeast-2.amazonaws.com)
+See [Cognito Web UI in Angular2](http://k-cognito-alpha.s3-website-ap-southeast-2.amazonaws.com).
 
 ## Actual AWS Setup
 
-Use `Cognito-UserPool-IdentityPool-DynamoDB.template` in [https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito](https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito)
+Use `Cognito-UserPool-IdentityPool-DynamoDB.template` in 
+[https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito](
+https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito)
 to create
 
 1. Cognito Identity Pool with auth/unauth roles and policies
