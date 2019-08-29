@@ -5,17 +5,8 @@ before_install:
   # Set NG_CLI_ANALYTICS to disable Angular CLI prompt "Would you like to share anonymous usage data with the Angular Team" 
   - export NG_CLI_ANALYTICS=ci
 install:
-  - npm uninstall -g angular/cli
-  - npm uninstall --save-dev angular-cli
-  - rm -rf node_modules dist
-  - npm cache clean --force
-  - npm install -g @angular/cli@latest
-  - npm install --save-dev @angular/cli@latest
-  - npm install --save @angular/compiler-cli
   - npm install
 script:
-  #- ng update @angular/cli --migrate-only --from=1.7.4
-  - ng update @angular/cli
   - ng build
   - cd dist
   - ls -al
