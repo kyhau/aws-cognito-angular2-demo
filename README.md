@@ -1,5 +1,9 @@
 # Cognito Web UI in Angular2
 
+**[kyhau](https://github.com/kyhau)**: My folk of [awslabs/aws-cognito-angular-quickstart](https://github.com/awslabs/aws-cognito-angular-quickstart). See [all changes here](https://github.com/kyhau/aws-cognito-angular2-webui/pulls?q=is%3Apr+is%3Aclosed).
+
+---
+
 node v10.16: [![Build Status](https://travis-ci.org/kyhau/aws-cognito-angular2-webui.svg?branch=master)](
 https://travis-ci.org/kyhau/aws-cognito-angular2-webui)
 
