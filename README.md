@@ -18,9 +18,8 @@ See [Cognito Web UI in Angular2](http://k-cognito-alpha.s3-website-ap-southeast-
 
 ## Actual AWS Setup
 
-Use `Cognito-UserPool-IdentityPool-DynamoDB.template` in 
-[https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito](
-https://github.com/kyhau/aws-cf-templates/tree/master/templates/Cognito)
+Use `Cognito-UserPool-IdentityPool-DynamoDB.template.yaml` in 
+[kyhau/arki/Cognito](https://github.com/kyhau/arki/tree/master/Cognito/cloudformation)
 to create
 
 1. Cognito Identity Pool with auth/unauth roles and policies
@@ -48,7 +47,9 @@ curl –I http://(your-bucket-name).s3-website-(your-region).amazonaws.com/
 ```
 
 ## Necessary changes
-You  will need to change the following configurations in `cognito.service.ts` and `ddb.service.ts`.
+You  will need to change the following configurations in 
+[`cognito.service.ts`](src/app/service/cognito.service.ts) and 
+[`ddb.service.ts`](src/app/service/ddb.service.ts).
 
 1. User pool ID,
 2. Identity pool ID,
